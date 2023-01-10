@@ -1,0 +1,286 @@
+@font-face {
+    font-family: oskari;
+    src: url(/Oskari.747a9ca4.otf)
+}
+
+@font-face {
+    font-family: euclidLight;
+    src: url(/EuclidCircularA-Light.17aa10db.ttf)
+}
+
+@font-face {
+    font-family: neutral;
+    src: url(/NeutralFace.448ecc2c.otf)
+}
+
+body {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    background: #000
+}
+
+.content {
+    display: none;
+    justify-content: center;
+    z-index: 3;
+    transition: 1s
+}
+
+.content,
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+
+canvas {
+    z-index: -1
+}
+
+nav {
+    width: 100vw;
+    height: 5vh
+}
+
+nav img {
+    margin-top: 5vh;
+    margin-left: 5vw;
+    height: 20px
+}
+
+#loader {
+    position: fixed;
+    z-index: 6;
+    left: 0;
+    top: 0;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center
+}
+
+label {
+    color: #f3f3f3
+}
+
+#load {
+    z-index: 3;
+    position: fixed;
+    bottom: 20vh;
+    width: 30vw;
+    height: 3px;
+    background-color: #303030;
+    display: flex;
+    justify-content: flex-start
+}
+
+#progress {
+    position: relative;
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    animation: loading 1.5s ease-out infinite alternate-reverse
+}
+
+@keyframes loading {
+    0% {
+        transform: scaleX(0)
+    }
+
+    to {
+        transform: scaleX(100%)
+    }
+}
+
+#intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    align-items: center;
+    width: 80vw;
+    height: 80vh
+}
+
+#intro h1 {
+    font-family: neutral;
+    position: relative;
+    font-size: 8vw;
+    color: #fff
+}
+
+#intro h2 {
+    font-family: euclidLight;
+    position: relative;
+    font-size: 1em;
+    color: #3a3a3a
+}
+
+#intro button {
+    outline: none;
+    border: 3px solid #4d4d4d;
+    background-color: transparent;
+    width: 30vw;
+    height: 10vh;
+    color: #272727;
+    border-radius: 10px;
+    font-size: 3vw;
+    font-family: neutral;
+    margin-top: 5vh;
+    margin-bottom: 5vh
+}
+
+#intro button:hover {
+    transition: .5s;
+    border: 5px solid #fff;
+    color: #fff
+}
+
+form {
+    position: absolute;
+    left: 10vw;
+    top: 40vh;
+    align-items: center;
+    justify-content: center
+}
+
+.form-step,
+form {
+    display: none;
+    flex-direction: column
+}
+
+.form-step {
+    animation: animate .5s
+}
+
+.form-step-active {
+    display: inline
+}
+
+@keyframes animate {
+    0% {
+        transform: scaleY(0);
+        opacity: o
+    }
+
+    t0 {
+        transform: scale(1);
+        opacity: 1
+    }
+}
+
+.form_field {
+    height: 10vh
+}
+
+#motivation,
+.form_field {
+    padding-left: 30px;
+    outline: none;
+    width: 40vw;
+    background-color: #161616;
+    border: none;
+    border-radius: 30px;
+    font-size: 30px;
+    color: #dfdfdf;
+    font-family: euclidLight
+}
+
+#motivation {
+    margin-top: -200px;
+    height: 30vh;
+    padding-top: 3%
+}
+
+form #button_space {
+    width: 23vw;
+    display: flex;
+    justify-content: space-between
+}
+
+.direction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    border: none;
+    margin-top: 10vh;
+    border-radius: 30px;
+    width: 10vw;
+    height: 10vh;
+    background-color: #fae632;
+    font-family: euclidLight;
+    font-size: 24px
+}
+
+.progress-bar {
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100% !important;
+    margin-top: 5%;
+    transition: .3s
+}
+
+.progress-bar:before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: #2c2c2c;
+    z-index: -20
+}
+
+.progress-step {
+    margin-top: -1%;
+    width: 2.6rem;
+    height: 2.6rem;
+    border-radius: 50%;
+    background: #2c2c2c
+}
+
+.progress-step-active {
+    display: flex;
+    background-color: #fae632;
+    color: #f3f3f3
+}
+
+#end,
+input {
+    display: flex
+}
+
+#end {
+    color: #fff !important;
+    font-size: 4.3vw;
+    font-family: euclidLight;
+    position: relative;
+    color: #3a3a3a
+}
+
+.cee {
+    display: flex;
+    justify-content: center
+}
+
+a {
+    text-decoration: none
+}
+
+h4 {
+    font-family: none;
+    position: relative;
+    font-size: 2vw;
+    color: #8d7d7d
+}
+
+/*# sourceMappingURL=/style.a0ac1b4b.css.map */
